@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices" elementFormDefault="qualified" targetNamespace="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://mossdevappsvr:8003/AMNDocumentService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" />
+  <xs:import schemaLocation="http://mossdevappsvr:8003/AMNDocumentService?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/AMN.EnterpriseServices.DocumentServices" />
+  <xs:import schemaLocation="http://mossdevappsvr:8003/AMNDocumentService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://mossdevappsvr:8003/AMNDocumentService?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="GetPacketDocumentByQMSetup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QMSetupId" type="xs:int" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="externalSystem" type="q1:ExternalSystem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPacketDocumentByQMSetupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/AMN.EnterpriseServices.DocumentServices" minOccurs="0" name="GetPacketDocumentByQMSetupResult" nillable="true" type="q2:PacketDocumentItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateRecipientItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/AMN.EnterpriseServices.DocumentServices" minOccurs="0" name="item" nillable="true" type="q3:RecipientItem" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="library" type="q4:PacketLibrary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateRecipientItemResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SiteExists">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="siteIndex" type="xs:int" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="site" type="q5:Site" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SiteExistsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SiteExistsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TestOutParam">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="assigned" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TestOutParamResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TestOutParamResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="output" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddQueueDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/AMN.EnterpriseServices.DocumentServices" minOccurs="0" name="item" nillable="true" type="q6:QueueDocumentItem" />
+        <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="sourceDocumentID" type="q7:guid" />
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddQueueDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="AddQueueDocumentResult" type="q8:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindDocuments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="assigned" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="unassigned" type="xs:boolean" />
+        <xs:element minOccurs="0" name="travelerID" type="xs:int" />
+        <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="faxRecipients" nillable="true" type="q9:ArrayOfstring" />
+        <xs:element minOccurs="0" name="title" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startCreateDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endCreateDate" type="xs:dateTime" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="statusCollection" nillable="true" type="q10:ArrayOfQueueDocumentStatus" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="priority" type="q11:QueueDocumentPriority" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="library" type="q12:QueueLibrary" />
+        <xs:element minOccurs="0" name="rowLimit" type="xs:unsignedInt" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindDocumentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/AMN.EnterpriseServices.DocumentServices" minOccurs="0" name="FindDocumentsResult" nillable="true" type="q13:ArrayOfQueueDocumentItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQueueDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="uniqueID" type="q14:guid" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="library" type="q15:QueueLibrary" />
+        <xs:element minOccurs="0" name="checkout" type="xs:boolean" />
+        <xs:element minOccurs="0" name="assigned" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="includeFile" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQueueDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/AMN.EnterpriseServices.DocumentServices" minOccurs="0" name="GetQueueDocumentResult" nillable="true" type="q16:QueueDocumentItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNextQueueDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="library" type="q17:QueueLibrary" />
+        <xs:element minOccurs="0" name="assigned" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="includeFile" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNextQueueDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/AMN.EnterpriseServices.DocumentServices" minOccurs="0" name="GetNextQueueDocumentResult" nillable="true" type="q18:QueueDocumentItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQueueDocumentFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="uniqueID" type="q19:guid" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="library" type="q20:QueueLibrary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQueueDocumentFileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetQueueDocumentFileResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UndoCheckout">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="uniqueID" type="q21:guid" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="library" type="q22:QueueLibrary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UndoCheckoutResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateQueueDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/AMN.EnterpriseServices.DocumentServices" minOccurs="0" name="item" nillable="true" type="q23:QueueDocumentItem" />
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="library" type="q24:QueueLibrary" />
+        <xs:element minOccurs="0" name="checkin" type="xs:boolean" />
+        <xs:element minOccurs="0" name="fromStatus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateQueueDocumentResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteQueueDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="uniqueID" type="q25:guid" />
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="library" type="q26:QueueLibrary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteQueueDocumentResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQueueStatusCounts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="library" type="q27:QueueLibrary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQueueStatusCountsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/AMN.EnterpriseServices.DocumentServices" minOccurs="0" name="GetQueueStatusCountsResult" nillable="true" type="q28:ArrayOfQueueStatusItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExpiredQueueDocuments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="library" type="q29:QueueLibrary" />
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="status" type="q30:QueueDocumentStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExpiredQueueDocumentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/AMN.EnterpriseServices.DocumentServices" minOccurs="0" name="GetExpiredQueueDocumentsResult" nillable="true" type="q31:ArrayOfQueueDocumentItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteExpiredQueueDocuments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="library" type="q32:QueueLibrary" />
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="status" type="q33:QueueDocumentStatus" />
+        <xs:element minOccurs="0" name="expirationDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteExpiredQueueDocumentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="DeleteExpiredQueueDocumentsResult" nillable="true" type="q34:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddTravelerDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/AMN.EnterpriseServices.DocumentServices" minOccurs="0" name="item" nillable="true" type="q35:TravelerDocumentItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddTravelerDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="AddTravelerDocumentResult" type="q36:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddTravelerDocument2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/AMN.EnterpriseServices.DocumentServices" minOccurs="0" name="item" nillable="true" type="q37:TravelerDocumentItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddTravelerDocument2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/AMN.EnterpriseServices.DocumentServices" minOccurs="0" name="AddTravelerDocument2Result" nillable="true" type="q38:TravelerDocumentItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTravelerDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/AMN.EnterpriseServices.DocumentServices" minOccurs="0" name="item" nillable="true" type="q39:TravelerDocumentItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTravelerDocumentResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteTravelerDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="travelerID" type="xs:int" />
+        <xs:element xmlns:q40="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="uniqueID" type="q40:guid" />
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="library" type="q41:TravelerLibrary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteTravelerDocumentResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTravelerDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="travelerID" type="xs:int" />
+        <xs:element xmlns:q42="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="uniqueID" type="q42:guid" />
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="type" type="q43:TravelerLibrary" />
+        <xs:element minOccurs="0" name="includeFile" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTravelerDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/AMN.EnterpriseServices.DocumentServices" minOccurs="0" name="GetTravelerDocumentResult" nillable="true" type="q44:TravelerDocumentItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTravelerDocuments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="travelerID" type="xs:int" />
+        <xs:element minOccurs="0" name="folder" nillable="true" type="xs:string" />
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="library" type="q45:TravelerLibrary" />
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="status" type="q46:DocumentStatus" />
+        <xs:element minOccurs="0" name="moleculeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTravelerDocumentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/AMN.EnterpriseServices.DocumentServices" minOccurs="0" name="GetTravelerDocumentsResult" nillable="true" type="q47:ArrayOfTravelerDocumentItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTravelerMiscellaneousDocuments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="travelerID" type="xs:int" />
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="library" type="q48:TravelerLibrary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTravelerMiscellaneousDocumentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/AMN.EnterpriseServices.DocumentServices" minOccurs="0" name="GetTravelerMiscellaneousDocumentsResult" nillable="true" type="q49:ArrayOfTravelerDocumentItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTravelerIncompleteDocuments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="travelerID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTravelerIncompleteDocumentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/AMN.EnterpriseServices.DocumentServices" minOccurs="0" name="GetTravelerIncompleteDocumentsResult" nillable="true" type="q50:ArrayOfQueueDocumentItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTravelerDocumentFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="travelerID" type="xs:int" />
+        <xs:element xmlns:q51="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="uniqueID" type="q51:guid" />
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="library" type="q52:TravelerLibrary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTravelerDocumentFileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTravelerDocumentFileResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTravelerDocumentsUrl">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="travelerID" type="xs:int" />
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="library" type="q53:TravelerLibrary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTravelerDocumentsUrlResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTravelerDocumentsUrlResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTravelerFolders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="library" type="q54:TravelerLibrary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTravelerFoldersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTravelerFoldersResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTravelerFolderPermissions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="travelerID" type="xs:int" />
+        <xs:element minOccurs="0" name="folder" nillable="true" type="xs:string" />
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="library" type="q55:TravelerLibrary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTravelerFolderPermissionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTravelerFolderPermissionsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendPacketDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/AMN.EnterpriseServices.DocumentServices" minOccurs="0" name="item" nillable="true" type="q56:PacketDocumentItem" />
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/AMN.EnterpriseServices.DocumentServices" minOccurs="0" name="recipients" nillable="true" type="q57:ArrayOfRecipientItem" />
+        <xs:element minOccurs="0" name="subject" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="body" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="senderName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="senderEmail" nillable="true" type="xs:string" />
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="library" type="q58:PacketLibrary" />
+        <xs:element minOccurs="0" name="isBodyHtml" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendPacketDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="SendPacketDocumentResult" type="q59:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResendPacketDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="uniqueID" type="q60:guid" />
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/AMN.EnterpriseServices.DocumentServices" minOccurs="0" name="recipients" nillable="true" type="q61:ArrayOfRecipientItem" />
+        <xs:element minOccurs="0" name="subject" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="body" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="senderName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="senderEmail" nillable="true" type="xs:string" />
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="library" type="q62:PacketLibrary" />
+        <xs:element minOccurs="0" name="isBodyHtml" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResendPacketDocumentResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePacketDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/AMN.EnterpriseServices.DocumentServices" minOccurs="0" name="item" nillable="true" type="q63:PacketDocumentItem" />
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="library" type="q64:PacketLibrary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePacketDocumentResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPacketDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/AMN.EnterpriseServices.DocumentServices" minOccurs="0" name="packetDocumentArgs" nillable="true" type="q65:PacketDocumentArgs" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPacketDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/AMN.EnterpriseServices.DocumentServices" minOccurs="0" name="GetPacketDocumentResult" nillable="true" type="q66:PacketDocumentItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEventPacketDocuments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="travelerID" type="xs:int" />
+        <xs:element minOccurs="0" name="qmSetupId" type="xs:int" />
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="library" type="q67:PacketLibrary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEventPacketDocumentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/AMN.EnterpriseServices.DocumentServices" minOccurs="0" name="GetEventPacketDocumentsResult" nillable="true" type="q68:ArrayOfPacketDocumentItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPacketDocuments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="travelerID" type="xs:int" />
+        <xs:element minOccurs="0" name="placementID" type="xs:int" />
+        <xs:element minOccurs="0" name="facilityID" type="xs:int" />
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="library" type="q69:PacketLibrary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPacketDocumentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/AMN.EnterpriseServices.DocumentServices" minOccurs="0" name="GetPacketDocumentsResult" nillable="true" type="q70:ArrayOfPacketDocumentItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPacketDocumentRecipients">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="documentID" type="q71:guid" />
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="library" type="q72:PacketLibrary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPacketDocumentRecipientsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/AMN.EnterpriseServices.DocumentServices" minOccurs="0" name="GetPacketDocumentRecipientsResult" nillable="true" type="q73:ArrayOfRecipientItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPacketDocumentFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="uniqueID" type="q74:guid" />
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="library" type="q75:PacketLibrary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPacketDocumentFileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPacketDocumentFileResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQueuedPacketRecipients">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="library" type="q76:PacketLibrary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQueuedPacketRecipientsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/AMN.EnterpriseServices.DocumentServices" minOccurs="0" name="GetQueuedPacketRecipientsResult" nillable="true" type="q77:ArrayOfRecipientItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

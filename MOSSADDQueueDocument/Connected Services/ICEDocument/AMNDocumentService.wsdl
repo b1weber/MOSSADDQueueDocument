@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/Imports">
+      <xsd:import schemaLocation="http://mossdevappsvr:8003/AMNDocumentService?xsd=xsd0" namespace="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices" />
+      <xsd:import schemaLocation="http://mossdevappsvr:8003/AMNDocumentService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" />
+      <xsd:import schemaLocation="http://mossdevappsvr:8003/AMNDocumentService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://mossdevappsvr:8003/AMNDocumentService?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/AMN.EnterpriseServices.DocumentServices" />
+      <xsd:import schemaLocation="http://mossdevappsvr:8003/AMNDocumentService?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDocumentService_GetPacketDocumentByQMSetup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPacketDocumentByQMSetup" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetPacketDocumentByQMSetup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPacketDocumentByQMSetupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetPacketDocumentByQMSetup_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q1:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_UpdateRecipientItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRecipientItem" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_UpdateRecipientItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRecipientItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_UpdateRecipientItem_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q2:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_SiteExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:SiteExists" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_SiteExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SiteExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_SiteExists_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q3:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_TestOutParam_InputMessage">
+    <wsdl:part name="parameters" element="tns:TestOutParam" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_TestOutParam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestOutParamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_TestOutParam_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q4:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_AddQueueDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddQueueDocument" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_AddQueueDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddQueueDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_AddQueueDocument_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q5:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_FindDocuments_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindDocuments" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_FindDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_FindDocuments_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q6:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetQueueDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQueueDocument" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetQueueDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQueueDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetQueueDocument_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q7:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetNextQueueDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNextQueueDocument" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetNextQueueDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNextQueueDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetNextQueueDocument_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q8:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetQueueDocumentFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQueueDocumentFile" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetQueueDocumentFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQueueDocumentFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetQueueDocumentFile_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q9:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_UndoCheckout_InputMessage">
+    <wsdl:part name="parameters" element="tns:UndoCheckout" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_UndoCheckout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UndoCheckoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_UndoCheckout_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q10:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_UpdateQueueDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateQueueDocument" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_UpdateQueueDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateQueueDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_UpdateQueueDocument_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q11:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_DeleteQueueDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteQueueDocument" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_DeleteQueueDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteQueueDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_DeleteQueueDocument_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q12:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetQueueStatusCounts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQueueStatusCounts" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetQueueStatusCounts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQueueStatusCountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetQueueStatusCounts_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q13:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetExpiredQueueDocuments_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExpiredQueueDocuments" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetExpiredQueueDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExpiredQueueDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetExpiredQueueDocuments_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q14:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_DeleteExpiredQueueDocuments_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteExpiredQueueDocuments" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_DeleteExpiredQueueDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteExpiredQueueDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_DeleteExpiredQueueDocuments_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q15:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_AddTravelerDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTravelerDocument" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_AddTravelerDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTravelerDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_AddTravelerDocument_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q16:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_AddTravelerDocument2_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTravelerDocument2" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_AddTravelerDocument2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTravelerDocument2Response" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_AddTravelerDocument2_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q17:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_UpdateTravelerDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTravelerDocument" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_UpdateTravelerDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTravelerDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_UpdateTravelerDocument_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q18:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_DeleteTravelerDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTravelerDocument" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_DeleteTravelerDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTravelerDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_DeleteTravelerDocument_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q19:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetTravelerDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTravelerDocument" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetTravelerDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTravelerDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetTravelerDocument_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q20:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetTravelerDocuments_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTravelerDocuments" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetTravelerDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTravelerDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetTravelerDocuments_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q21:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetTravelerMiscellaneousDocuments_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTravelerMiscellaneousDocuments" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetTravelerMiscellaneousDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTravelerMiscellaneousDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetTravelerMiscellaneousDocuments_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q22:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetTravelerIncompleteDocuments_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTravelerIncompleteDocuments" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetTravelerIncompleteDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTravelerIncompleteDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetTravelerIncompleteDocuments_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q23:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetTravelerDocumentFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTravelerDocumentFile" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetTravelerDocumentFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTravelerDocumentFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetTravelerDocumentFile_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q24:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetTravelerDocumentsUrl_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTravelerDocumentsUrl" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetTravelerDocumentsUrl_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTravelerDocumentsUrlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetTravelerDocumentsUrl_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q25:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetTravelerFolders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTravelerFolders" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetTravelerFolders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTravelerFoldersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetTravelerFolders_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q26:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetTravelerFolderPermissions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTravelerFolderPermissions" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetTravelerFolderPermissions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTravelerFolderPermissionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetTravelerFolderPermissions_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q27:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_SendPacketDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendPacketDocument" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_SendPacketDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendPacketDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_SendPacketDocument_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q28:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_ResendPacketDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResendPacketDocument" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_ResendPacketDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResendPacketDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_ResendPacketDocument_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q29:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_UpdatePacketDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePacketDocument" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_UpdatePacketDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePacketDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_UpdatePacketDocument_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q30:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetPacketDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPacketDocument" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetPacketDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPacketDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetPacketDocument_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q31:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetEventPacketDocuments_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventPacketDocuments" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetEventPacketDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventPacketDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetEventPacketDocuments_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q32:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetPacketDocuments_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPacketDocuments" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetPacketDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPacketDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetPacketDocuments_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q33:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetPacketDocumentRecipients_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPacketDocumentRecipients" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetPacketDocumentRecipients_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPacketDocumentRecipientsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetPacketDocumentRecipients_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q34:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetPacketDocumentFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPacketDocumentFile" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetPacketDocumentFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPacketDocumentFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetPacketDocumentFile_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q35:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetQueuedPacketRecipients_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQueuedPacketRecipients" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetQueuedPacketRecipients_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQueuedPacketRecipientsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentService_GetQueuedPacketRecipients_WCFErrorMessageFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" name="detail" element="q36:WCFErrorMessage" />
+  </wsdl:message>
+  <wsdl:portType name="IDocumentService">
+    <wsdl:operation name="GetPacketDocumentByQMSetup">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetPacketDocumentByQMSetup" message="tns:IDocumentService_GetPacketDocumentByQMSetup_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetPacketDocumentByQMSetupResponse" message="tns:IDocumentService_GetPacketDocumentByQMSetup_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetPacketDocumentByQMSetupWCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_GetPacketDocumentByQMSetup_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRecipientItem">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/UpdateRecipientItem" message="tns:IDocumentService_UpdateRecipientItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/UpdateRecipientItemResponse" message="tns:IDocumentService_UpdateRecipientItem_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/UpdateRecipientItemWCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_UpdateRecipientItem_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SiteExists">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/SiteExists" message="tns:IDocumentService_SiteExists_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/SiteExistsResponse" message="tns:IDocumentService_SiteExists_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/SiteExistsWCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_SiteExists_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TestOutParam">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/TestOutParam" message="tns:IDocumentService_TestOutParam_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/TestOutParamResponse" message="tns:IDocumentService_TestOutParam_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/TestOutParamWCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_TestOutParam_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddQueueDocument">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/AddQueueDocument" message="tns:IDocumentService_AddQueueDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/AddQueueDocumentResponse" message="tns:IDocumentService_AddQueueDocument_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/AddQueueDocumentWCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_AddQueueDocument_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindDocuments">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/FindDocuments" message="tns:IDocumentService_FindDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/FindDocumentsResponse" message="tns:IDocumentService_FindDocuments_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/FindDocumentsWCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_FindDocuments_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQueueDocument">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetQueueDocument" message="tns:IDocumentService_GetQueueDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetQueueDocumentResponse" message="tns:IDocumentService_GetQueueDocument_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetQueueDocumentWCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_GetQueueDocument_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNextQueueDocument">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetNextQueueDocument" message="tns:IDocumentService_GetNextQueueDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetNextQueueDocumentResponse" message="tns:IDocumentService_GetNextQueueDocument_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetNextQueueDocumentWCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_GetNextQueueDocument_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQueueDocumentFile">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetQueueDocumentFile" message="tns:IDocumentService_GetQueueDocumentFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetQueueDocumentFileResponse" message="tns:IDocumentService_GetQueueDocumentFile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetQueueDocumentFileWCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_GetQueueDocumentFile_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UndoCheckout">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/UndoCheckout" message="tns:IDocumentService_UndoCheckout_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/UndoCheckoutResponse" message="tns:IDocumentService_UndoCheckout_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/UndoCheckoutWCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_UndoCheckout_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateQueueDocument">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/UpdateQueueDocument" message="tns:IDocumentService_UpdateQueueDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/UpdateQueueDocumentResponse" message="tns:IDocumentService_UpdateQueueDocument_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/UpdateQueueDocumentWCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_UpdateQueueDocument_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteQueueDocument">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/DeleteQueueDocument" message="tns:IDocumentService_DeleteQueueDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/DeleteQueueDocumentResponse" message="tns:IDocumentService_DeleteQueueDocument_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/DeleteQueueDocumentWCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_DeleteQueueDocument_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQueueStatusCounts">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetQueueStatusCounts" message="tns:IDocumentService_GetQueueStatusCounts_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetQueueStatusCountsResponse" message="tns:IDocumentService_GetQueueStatusCounts_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetQueueStatusCountsWCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_GetQueueStatusCounts_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExpiredQueueDocuments">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetExpiredQueueDocuments" message="tns:IDocumentService_GetExpiredQueueDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetExpiredQueueDocumentsResponse" message="tns:IDocumentService_GetExpiredQueueDocuments_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetExpiredQueueDocumentsWCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_GetExpiredQueueDocuments_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExpiredQueueDocuments">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/DeleteExpiredQueueDocuments" message="tns:IDocumentService_DeleteExpiredQueueDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/DeleteExpiredQueueDocumentsResponse" message="tns:IDocumentService_DeleteExpiredQueueDocuments_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/DeleteExpiredQueueDocumentsWCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_DeleteExpiredQueueDocuments_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTravelerDocument">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/AddTravelerDocument" message="tns:IDocumentService_AddTravelerDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/AddTravelerDocumentResponse" message="tns:IDocumentService_AddTravelerDocument_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/AddTravelerDocumentWCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_AddTravelerDocument_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTravelerDocument2">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/AddTravelerDocument2" message="tns:IDocumentService_AddTravelerDocument2_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/AddTravelerDocument2Response" message="tns:IDocumentService_AddTravelerDocument2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/AddTravelerDocument2WCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_AddTravelerDocument2_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTravelerDocument">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/UpdateTravelerDocument" message="tns:IDocumentService_UpdateTravelerDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/UpdateTravelerDocumentResponse" message="tns:IDocumentService_UpdateTravelerDocument_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/UpdateTravelerDocumentWCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_UpdateTravelerDocument_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTravelerDocument">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/DeleteTravelerDocument" message="tns:IDocumentService_DeleteTravelerDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/DeleteTravelerDocumentResponse" message="tns:IDocumentService_DeleteTravelerDocument_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/DeleteTravelerDocumentWCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_DeleteTravelerDocument_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelerDocument">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerDocument" message="tns:IDocumentService_GetTravelerDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerDocumentResponse" message="tns:IDocumentService_GetTravelerDocument_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerDocumentWCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_GetTravelerDocument_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelerDocuments">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerDocuments" message="tns:IDocumentService_GetTravelerDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerDocumentsResponse" message="tns:IDocumentService_GetTravelerDocuments_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerDocumentsWCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_GetTravelerDocuments_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelerMiscellaneousDocuments">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerMiscellaneousDocuments" message="tns:IDocumentService_GetTravelerMiscellaneousDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerMiscellaneousDocumentsResponse" message="tns:IDocumentService_GetTravelerMiscellaneousDocuments_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerMiscellaneousDocumentsWCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_GetTravelerMiscellaneousDocuments_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelerIncompleteDocuments">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerIncompleteDocuments" message="tns:IDocumentService_GetTravelerIncompleteDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerIncompleteDocumentsResponse" message="tns:IDocumentService_GetTravelerIncompleteDocuments_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerIncompleteDocumentsWCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_GetTravelerIncompleteDocuments_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelerDocumentFile">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerDocumentFile" message="tns:IDocumentService_GetTravelerDocumentFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerDocumentFileResponse" message="tns:IDocumentService_GetTravelerDocumentFile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerDocumentFileWCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_GetTravelerDocumentFile_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelerDocumentsUrl">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerDocumentsUrl" message="tns:IDocumentService_GetTravelerDocumentsUrl_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerDocumentsUrlResponse" message="tns:IDocumentService_GetTravelerDocumentsUrl_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerDocumentsUrlWCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_GetTravelerDocumentsUrl_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelerFolders">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerFolders" message="tns:IDocumentService_GetTravelerFolders_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerFoldersResponse" message="tns:IDocumentService_GetTravelerFolders_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerFoldersWCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_GetTravelerFolders_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelerFolderPermissions">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerFolderPermissions" message="tns:IDocumentService_GetTravelerFolderPermissions_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerFolderPermissionsResponse" message="tns:IDocumentService_GetTravelerFolderPermissions_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerFolderPermissionsWCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_GetTravelerFolderPermissions_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendPacketDocument">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/SendPacketDocument" message="tns:IDocumentService_SendPacketDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/SendPacketDocumentResponse" message="tns:IDocumentService_SendPacketDocument_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/SendPacketDocumentWCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_SendPacketDocument_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResendPacketDocument">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/ResendPacketDocument" message="tns:IDocumentService_ResendPacketDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/ResendPacketDocumentResponse" message="tns:IDocumentService_ResendPacketDocument_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/ResendPacketDocumentWCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_ResendPacketDocument_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePacketDocument">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/UpdatePacketDocument" message="tns:IDocumentService_UpdatePacketDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/UpdatePacketDocumentResponse" message="tns:IDocumentService_UpdatePacketDocument_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/UpdatePacketDocumentWCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_UpdatePacketDocument_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPacketDocument">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetPacketDocument" message="tns:IDocumentService_GetPacketDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetPacketDocumentResponse" message="tns:IDocumentService_GetPacketDocument_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetPacketDocumentWCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_GetPacketDocument_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventPacketDocuments">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetEventPacketDocuments" message="tns:IDocumentService_GetEventPacketDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetEventPacketDocumentsResponse" message="tns:IDocumentService_GetEventPacketDocuments_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetEventPacketDocumentsWCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_GetEventPacketDocuments_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPacketDocuments">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetPacketDocuments" message="tns:IDocumentService_GetPacketDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetPacketDocumentsResponse" message="tns:IDocumentService_GetPacketDocuments_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetPacketDocumentsWCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_GetPacketDocuments_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPacketDocumentRecipients">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetPacketDocumentRecipients" message="tns:IDocumentService_GetPacketDocumentRecipients_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetPacketDocumentRecipientsResponse" message="tns:IDocumentService_GetPacketDocumentRecipients_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetPacketDocumentRecipientsWCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_GetPacketDocumentRecipients_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPacketDocumentFile">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetPacketDocumentFile" message="tns:IDocumentService_GetPacketDocumentFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetPacketDocumentFileResponse" message="tns:IDocumentService_GetPacketDocumentFile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetPacketDocumentFileWCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_GetPacketDocumentFile_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQueuedPacketRecipients">
+      <wsdl:input wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetQueuedPacketRecipients" message="tns:IDocumentService_GetQueuedPacketRecipients_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetQueuedPacketRecipientsResponse" message="tns:IDocumentService_GetQueuedPacketRecipients_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetQueuedPacketRecipientsWCFErrorMessageFault" name="WCFErrorMessageFault" message="tns:IDocumentService_GetQueuedPacketRecipients_WCFErrorMessageFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

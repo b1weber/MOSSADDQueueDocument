@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5082d0f7-f5b6-406c-a600-6132bc5a3884" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://MOSSDevAppSvr:8003/AMNDocumentService" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AMNDocumentService.xsd" MetadataType="Schema" ID="284e087f-c09b-49f0-9882-f63ddd9548ee" SourceId="1" SourceUrl="http://mossdevappsvr:8003/AMNDocumentService?xsd=xsd4" />
+    <MetadataFile FileName="AMNDocumentService1.xsd" MetadataType="Schema" ID="08fdcffe-5293-49a1-8c33-290c8b3ba9ce" SourceId="1" SourceUrl="http://mossdevappsvr:8003/AMNDocumentService?xsd=xsd3" />
+    <MetadataFile FileName="AMNDocumentService.disco" MetadataType="Disco" ID="892e1852-4c19-4791-908b-9db9c6a009cf" SourceId="1" SourceUrl="http://mossdevappsvr:8003/AMNDocumentService?disco" />
+    <MetadataFile FileName="AMNDocumentService2.xsd" MetadataType="Schema" ID="664f3f09-a609-4755-96bf-1905720173f1" SourceId="1" SourceUrl="http://mossdevappsvr:8003/AMNDocumentService?xsd=xsd1" />
+    <MetadataFile FileName="AMNDocumentService3.xsd" MetadataType="Schema" ID="14bb5344-77b8-428e-b3c1-295ef0ad8939" SourceId="1" SourceUrl="http://mossdevappsvr:8003/AMNDocumentService?xsd=xsd0" />
+    <MetadataFile FileName="AMNDocumentService4.xsd" MetadataType="Schema" ID="f8ee1c62-147e-416b-8e81-7e25188fee7e" SourceId="1" SourceUrl="http://mossdevappsvr:8003/AMNDocumentService?xsd=xsd2" />
+    <MetadataFile FileName="DocumentService.wsdl" MetadataType="Wsdl" ID="cbeebfd6-9e89-4db3-b0bf-cef864cf9f1b" SourceId="1" SourceUrl="http://mossdevappsvr:8003/AMNDocumentService?wsdl" />
+    <MetadataFile FileName="AMNDocumentService.wsdl" MetadataType="Wsdl" ID="9ee7827c-c3a0-4663-9eb0-695d2e61ec01" SourceId="1" SourceUrl="http://mossdevappsvr:8003/AMNDocumentService?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

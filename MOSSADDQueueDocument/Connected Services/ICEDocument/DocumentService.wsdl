@@ -1,0 +1,1345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DocumentService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IDocumentService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="NetNamedPipeBinding_IDocumentService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices" location="http://mossdevappsvr:8003/AMNDocumentService?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="NetTcpBinding_IDocumentService" type="i0:IDocumentService">
+    <wsp:PolicyReference URI="#NetTcpBinding_IDocumentService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetPacketDocumentByQMSetup">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetPacketDocumentByQMSetup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRecipientItem">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/UpdateRecipientItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SiteExists">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/SiteExists" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="TestOutParam">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/TestOutParam" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddQueueDocument">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/AddQueueDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FindDocuments">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/FindDocuments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQueueDocument">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetQueueDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNextQueueDocument">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetNextQueueDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQueueDocumentFile">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetQueueDocumentFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UndoCheckout">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/UndoCheckout" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateQueueDocument">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/UpdateQueueDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteQueueDocument">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/DeleteQueueDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQueueStatusCounts">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetQueueStatusCounts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetExpiredQueueDocuments">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetExpiredQueueDocuments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExpiredQueueDocuments">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/DeleteExpiredQueueDocuments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddTravelerDocument">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/AddTravelerDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddTravelerDocument2">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/AddTravelerDocument2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTravelerDocument">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/UpdateTravelerDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTravelerDocument">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/DeleteTravelerDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelerDocument">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelerDocuments">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerDocuments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelerMiscellaneousDocuments">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerMiscellaneousDocuments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelerIncompleteDocuments">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerIncompleteDocuments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelerDocumentFile">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerDocumentFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelerDocumentsUrl">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerDocumentsUrl" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelerFolders">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerFolders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelerFolderPermissions">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerFolderPermissions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SendPacketDocument">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/SendPacketDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ResendPacketDocument">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/ResendPacketDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePacketDocument">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/UpdatePacketDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPacketDocument">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetPacketDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventPacketDocuments">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetEventPacketDocuments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPacketDocuments">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetPacketDocuments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPacketDocumentRecipients">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetPacketDocumentRecipients" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPacketDocumentFile">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetPacketDocumentFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQueuedPacketRecipients">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetQueuedPacketRecipients" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IDocumentService" type="i0:IDocumentService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPacketDocumentByQMSetup">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetPacketDocumentByQMSetup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRecipientItem">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/UpdateRecipientItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SiteExists">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/SiteExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="TestOutParam">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/TestOutParam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddQueueDocument">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/AddQueueDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FindDocuments">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/FindDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQueueDocument">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetQueueDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNextQueueDocument">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetNextQueueDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQueueDocumentFile">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetQueueDocumentFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UndoCheckout">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/UndoCheckout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateQueueDocument">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/UpdateQueueDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteQueueDocument">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/DeleteQueueDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQueueStatusCounts">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetQueueStatusCounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetExpiredQueueDocuments">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetExpiredQueueDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExpiredQueueDocuments">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/DeleteExpiredQueueDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddTravelerDocument">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/AddTravelerDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddTravelerDocument2">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/AddTravelerDocument2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTravelerDocument">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/UpdateTravelerDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTravelerDocument">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/DeleteTravelerDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelerDocument">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelerDocuments">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelerMiscellaneousDocuments">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerMiscellaneousDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelerIncompleteDocuments">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerIncompleteDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelerDocumentFile">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerDocumentFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelerDocumentsUrl">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerDocumentsUrl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelerFolders">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerFolders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelerFolderPermissions">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerFolderPermissions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SendPacketDocument">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/SendPacketDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ResendPacketDocument">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/ResendPacketDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePacketDocument">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/UpdatePacketDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPacketDocument">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetPacketDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventPacketDocuments">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetEventPacketDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPacketDocuments">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetPacketDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPacketDocumentRecipients">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetPacketDocumentRecipients" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPacketDocumentFile">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetPacketDocumentFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQueuedPacketRecipients">
+      <soap:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetQueuedPacketRecipients" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NetNamedPipeBinding_IDocumentService" type="i0:IDocumentService">
+    <wsp:PolicyReference URI="#NetNamedPipeBinding_IDocumentService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/named-pipe" />
+    <wsdl:operation name="GetPacketDocumentByQMSetup">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetPacketDocumentByQMSetup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRecipientItem">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/UpdateRecipientItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SiteExists">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/SiteExists" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="TestOutParam">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/TestOutParam" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddQueueDocument">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/AddQueueDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FindDocuments">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/FindDocuments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQueueDocument">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetQueueDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNextQueueDocument">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetNextQueueDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQueueDocumentFile">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetQueueDocumentFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UndoCheckout">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/UndoCheckout" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateQueueDocument">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/UpdateQueueDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteQueueDocument">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/DeleteQueueDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQueueStatusCounts">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetQueueStatusCounts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetExpiredQueueDocuments">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetExpiredQueueDocuments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExpiredQueueDocuments">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/DeleteExpiredQueueDocuments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddTravelerDocument">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/AddTravelerDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddTravelerDocument2">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/AddTravelerDocument2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTravelerDocument">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/UpdateTravelerDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTravelerDocument">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/DeleteTravelerDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelerDocument">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelerDocuments">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerDocuments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelerMiscellaneousDocuments">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerMiscellaneousDocuments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelerIncompleteDocuments">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerIncompleteDocuments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelerDocumentFile">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerDocumentFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelerDocumentsUrl">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerDocumentsUrl" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelerFolders">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerFolders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelerFolderPermissions">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetTravelerFolderPermissions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SendPacketDocument">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/SendPacketDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ResendPacketDocument">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/ResendPacketDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePacketDocument">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/UpdatePacketDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPacketDocument">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetPacketDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventPacketDocuments">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetEventPacketDocuments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPacketDocuments">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetPacketDocuments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPacketDocumentRecipients">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetPacketDocumentRecipients" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPacketDocumentFile">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetPacketDocumentFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetQueuedPacketRecipients">
+      <soap12:operation soapAction="http://www.amnhealthcare.com/wcf/2008/01/24/AMN.EnterpriseServices.DocumentServices/IDocumentService/GetQueuedPacketRecipients" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WCFErrorMessageFault">
+        <soap12:fault use="literal" name="WCFErrorMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DocumentService">
+    <wsdl:port name="NetTcpBinding_IDocumentService" binding="tns:NetTcpBinding_IDocumentService">
+      <soap12:address location="net.tcp://mossdevappsvr:8002/AMNDocumentService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://mossdevappsvr:8002/AMNDocumentService</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IDocumentService" binding="tns:BasicHttpBinding_IDocumentService">
+      <soap:address location="http://mossdevappsvr:8003/AMNDocumentService" />
+    </wsdl:port>
+    <wsdl:port name="NetNamedPipeBinding_IDocumentService" binding="tns:NetNamedPipeBinding_IDocumentService">
+      <soap12:address location="net.pipe://mossdevappsvr/AMNDocumentService/AMNDocumentService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.pipe://mossdevappsvr/AMNDocumentService/AMNDocumentService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

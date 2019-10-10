@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MOSSADDQueueDocument", "MOSSADDQueueDocument\MOSSADDQueueDocument.csproj", "{F76A961F-818B-4B56-9826-04CE660506A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MossClient", "MossClient\MossClient.csproj", "{F34979A7-8C63-4B82-B2BB-F1617A59BFA5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F76A961F-818B-4B56-9826-04CE660506A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F76A961F-818B-4B56-9826-04CE660506A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F76A961F-818B-4B56-9826-04CE660506A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F76A961F-818B-4B56-9826-04CE660506A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F34979A7-8C63-4B82-B2BB-F1617A59BFA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F34979A7-8C63-4B82-B2BB-F1617A59BFA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F34979A7-8C63-4B82-B2BB-F1617A59BFA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F34979A7-8C63-4B82-B2BB-F1617A59BFA5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5F591231-E967-488C-B186-BC4641D363B9}
+	EndGlobalSection
+EndGlobal

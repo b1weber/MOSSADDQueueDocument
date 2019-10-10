@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/AMN.EnterpriseServices.DocumentServices" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/AMN.EnterpriseServices.DocumentServices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://mossdevappsvr:8003/AMNDocumentService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" />
+  <xs:import schemaLocation="http://mossdevappsvr:8003/AMNDocumentService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="PacketDocumentItem">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DocumentItem">
+        <xs:sequence>
+          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="DocumentStatus" type="q1:DocumentStatus" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="ExternalSystem" type="q2:ExternalSystem" />
+          <xs:element minOccurs="0" name="FacilityID" type="xs:int" />
+          <xs:element minOccurs="0" name="PlacementID" type="xs:int" />
+          <xs:element minOccurs="0" name="QMSetupID" type="xs:int" />
+          <xs:element minOccurs="0" name="TravelerID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PacketDocumentItem" nillable="true" type="tns:PacketDocumentItem" />
+  <xs:complexType name="DocumentItem">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ListItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Data" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="Extension" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NotificationBody" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NotificationEMail" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NotificationSubject" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Received" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="URL" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DocumentItem" nillable="true" type="tns:DocumentItem" />
+  <xs:complexType name="ListItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UniqueID" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListItem" nillable="true" type="tns:ListItem" />
+  <xs:complexType name="RecipientItem">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ListItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ContactID" type="xs:int" />
+          <xs:element minOccurs="0" name="Recipient" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RightFaxID" type="xs:int" />
+          <xs:element minOccurs="0" name="Sent" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="SentBy" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SentStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Target" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RecipientItem" nillable="true" type="tns:RecipientItem" />
+  <xs:complexType name="QueueDocumentItem">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DocumentItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Assigned" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CheckedOut" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FacilityID" type="xs:int" />
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="Library" type="q3:QueueLibrary" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="Priority" type="q4:QueueDocumentPriority" />
+          <xs:element minOccurs="0" name="QMS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="Status" type="q5:QueueDocumentStatus" />
+          <xs:element minOccurs="0" name="TravelerFirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TravelerID" type="xs:int" />
+          <xs:element minOccurs="0" name="TravelerLastName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="QueueDocumentItem" nillable="true" type="tns:QueueDocumentItem" />
+  <xs:complexType name="ArrayOfQueueDocumentItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QueueDocumentItem" nillable="true" type="tns:QueueDocumentItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQueueDocumentItem" nillable="true" type="tns:ArrayOfQueueDocumentItem" />
+  <xs:complexType name="ArrayOfQueueStatusItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QueueStatusItem" nillable="true" type="tns:QueueStatusItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQueueStatusItem" nillable="true" type="tns:ArrayOfQueueStatusItem" />
+  <xs:complexType name="QueueStatusItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="QueueCount" type="xs:int" />
+      <xs:element minOccurs="0" name="QueueStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueueStatusItem" nillable="true" type="tns:QueueStatusItem" />
+  <xs:complexType name="TravelerDocumentItem">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DocumentItem">
+        <xs:sequence>
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="DocumentStatus" type="q6:DocumentStatus" />
+          <xs:element minOccurs="0" name="DocumentType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Folder" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LastUpdated" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="LastUpdatedBy" nillable="true" type="xs:string" />
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="Library" type="q7:TravelerLibrary" />
+          <xs:element minOccurs="0" name="MoleculeID" type="xs:int" />
+          <xs:element minOccurs="0" name="PlacementID" type="xs:int" />
+          <xs:element minOccurs="0" name="RequirementType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TravelerFirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TravelerID" type="xs:int" />
+          <xs:element minOccurs="0" name="TravelerLastName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TravelerDocumentItem" nillable="true" type="tns:TravelerDocumentItem" />
+  <xs:complexType name="ArrayOfTravelerDocumentItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TravelerDocumentItem" nillable="true" type="tns:TravelerDocumentItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTravelerDocumentItem" nillable="true" type="tns:ArrayOfTravelerDocumentItem" />
+  <xs:complexType name="ArrayOfRecipientItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RecipientItem" nillable="true" type="tns:RecipientItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRecipientItem" nillable="true" type="tns:ArrayOfRecipientItem" />
+  <xs:complexType name="PacketDocumentArgs">
+    <xs:sequence>
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="ExternalSystem" type="q8:ExternalSystem" />
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/AMN.Framework.Common" minOccurs="0" name="Library" type="q9:PacketLibrary" />
+      <xs:element minOccurs="0" name="PlacementId" type="xs:int" />
+      <xs:element minOccurs="0" name="QMSetupID" type="xs:int" />
+      <xs:element minOccurs="0" name="UniqueId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PacketDocumentArgs" nillable="true" type="tns:PacketDocumentArgs" />
+  <xs:complexType name="ArrayOfPacketDocumentItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PacketDocumentItem" nillable="true" type="tns:PacketDocumentItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPacketDocumentItem" nillable="true" type="tns:ArrayOfPacketDocumentItem" />
+</xs:schema>
