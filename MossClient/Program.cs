@@ -12,7 +12,7 @@ namespace MossClient
         static void Main(string[] args)
         {
             MOSSADDQueueDocument.MOSS client = new MOSS();
-            string myGuid = client.addQueueDocument(@"C:\temp\KhanNida.png", "CHARISSA EVANS" , 819984, "This comment is nonsense");
+            string myGuid = client.addQueueDocument(@"C:\Users\bweber\Pictures\amie.png", "CHARISSA", "EVANS" , 819984, "Testing from VStudio");
             Console.WriteLine("My GUID is: " + myGuid);
         }
     }

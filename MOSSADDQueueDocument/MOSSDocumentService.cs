@@ -9,45 +9,50 @@ namespace MOSSADDQueueDocument
 {
     public class MOSS
     {
-        public string addQueueDocument(string pathToFile, string travelerName, int travelerId, string Comments )
+        public string addQueueDocument(string pathToFile, string travelerFirstName, string travelerLastName, int travelerId, string Comments )
         {
-            System.IO.File.WriteAllText(@"D:\\Data\\BPMA\\FA_Worker_Robust_Files\\resultContent.txt", "calling addQueueDocument.  fileName=" + pathToFile + "  traveleName=" + travelerName + Environment.NewLine);
+            string fileNameDebug = "resultContent_" + travelerLastName + "_" + travelerId.ToString() + " .txt";
+            System.IO.File.WriteAllText(@"D:\\Data\\BPMA\\FA_Worker_Robust_Files\\" + fileNameDebug, Environment.NewLine + "calling addQueueDocument.  fileName=" + pathToFile + "  traveleName=" + travelerLastName + Environment.NewLine);
             //parse first and last from travlername
             //string fileName = string.Empty;
             string fileName = Path.GetFileName(pathToFile);
-            string travelerFirst = "CHARISSA";
-            string travelerLast = "EVANS";
+            string extension = Path.GetExtension(pathToFile).Replace(".","");
+            //string travelerFirst = "CHARISSA";
+            //string travelerLast = "EVANS";
             ICEDocument.DocumentServiceClient mossClient = new ICEDocument.DocumentServiceClient("BasicHttpBinding_IDocumentService");
-            System.IO.File.AppendAllText(@"D:\\Data\\BPMA\\FA_Worker_Robust_Files\\resultContent.txt", "mossClient acquired");
+            System.IO.File.AppendAllText(@"D:\\Data\\BPMA\\FA_Worker_Robust_Files\\" + fileNameDebug, "mossClient acquired");
             ICEDocument.QueueDocumentItem item = new ICEDocument.QueueDocumentItem
             {
                 Status = ICEDocument.QueueDocumentStatus.New,
                 Priority = ICEDocument.QueueDocumentPriority.Normal,
                 Title = fileName,
                 Name = fileName,
-                TravelerFirstName = travelerFirst,
-                TravelerLastName = travelerLast,
+                FileName = fileName,
+                Extension = extension,
+                TravelerFirstName = travelerFirstName,
+                TravelerLastName = travelerLastName,
                 Comments = Comments,
                 TravelerID = travelerId,
                 CreateDate = DateTime.Now,
                 Library = ICEDocument.QueueLibrary.Queue,
                 Email = "NoReply@amnheathcare.com"
             };
-            //System.IO.File.WriteAllText(@"D:\\Data\\BPMA\\FA_Worker_Robust_Files\\resultContent.txt", "QueueDocumentItem created");
-            System.IO.File.AppendAllText(@"D:\\Data\\BPMA\\FA_Worker_Robust_Files\\resultContent.txt", "QueueDocumentItem created" + Environment.NewLine);
 
             item.Data = GetFileInBytes(pathToFile);
             System.IO.File.AppendAllText(@"D:\\Data\\BPMA\\FA_Worker_Robust_Files\\resultContent.txt", "item.Data populated, calling AddQueueDocument" + Environment.NewLine);
             System.Guid guid = System.Guid.Empty;
             try
             {
-                guid = mossClient.AddQueueDocument(item, Guid.Empty, "AMIE"); //Guid.Empty
+                guid = mossClient.AddQueueDocument(item, Guid.Empty, "AMIE"); 
+                System.IO.File.AppendAllText(@"D:\\Data\\BPMA\\FA_Worker_Robust_Files\\" + fileNameDebug, guid + Environment.NewLine);
             }
             catch (Exception ex)
             {
-                System.IO.File.AppendAllText(@"D:\\Data\\BPMA\\FA_Worker_Robust_Files\\resultException.txt", "AddQueueDocumentException Error: " + ex.Message + Environment.NewLine);
+                System.IO.File.AppendAllText(@"D:\\Data\\BPMA\\FA_Worker_Robust_Files\\" + fileNameDebug, Environment.NewLine + "AddQueueDocumentException Error: " + ex.Message + Environment.NewLine);
+                System.IO.File.AppendAllText(@"D:\\Data\\BPMA\\FA_Worker_Robust_Files\\" + fileNameDebug, Environment.NewLine + "AddQueueDocumentException StackTrace: " + ex.StackTrace + Environment.NewLine);
+                System.IO.File.AppendAllText(@"D:\\Data\\BPMA\\FA_Worker_Robust_Files\\" + fileNameDebug, "AddQueueDocumentException endpoint:" + mossClient.Endpoint.Address + Environment.NewLine);
             }
-            System.IO.File.AppendAllText(@"D:\\Data\\BPMA\\FA_Worker_Robust_Files\\resultContent.txt", "AddQueueDocument" + Environment.NewLine);
+            System.IO.File.AppendAllText(@"D:\\Data\\BPMA\\FA_Worker_Robust_Files\\" + fileNameDebug, Environment.NewLine+ "AddQueueDocument" + Environment.NewLine);
 
             return guid.ToString();
         }
