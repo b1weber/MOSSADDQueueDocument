@@ -9,7 +9,7 @@ namespace MOSSADDQueueDocument
 {
     public class MOSS
     {
-        public string addQueueDocument(string pathToFile, string travelerFirstName, string travelerLastName, int travelerId, string Comments )
+        public string addQueueDocument(string pathToFile, string travelerFirstName, string travelerLastName, int travelerId, string Comments, string title )
         {
             string fileNameDebug = "resultContent_" + travelerLastName + "_" + travelerId.ToString() + " .txt";
             System.IO.File.WriteAllText(@"D:\\Data\\BPMA\\FA_Worker_Robust_Files\\" + fileNameDebug, Environment.NewLine + "calling addQueueDocument.  fileName=" + pathToFile + "  traveleName=" + travelerLastName + Environment.NewLine);
@@ -25,7 +25,7 @@ namespace MOSSADDQueueDocument
             {
                 Status = ICEDocument.QueueDocumentStatus.New,
                 Priority = ICEDocument.QueueDocumentPriority.Normal,
-                Title = fileName,
+                Title = title,
                 Name = fileName,
                 FileName = fileName,
                 Extension = extension,
@@ -34,7 +34,7 @@ namespace MOSSADDQueueDocument
                 Comments = Comments,
                 TravelerID = travelerId,
                 CreateDate = DateTime.Now,
-                Library = ICEDocument.QueueLibrary.Queue,
+                Library = ICEDocument.QueueLibrary.Bulkload,
                 Email = "NoReply@amnheathcare.com"
             };
 
