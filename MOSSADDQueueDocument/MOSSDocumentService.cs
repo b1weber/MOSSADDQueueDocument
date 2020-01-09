@@ -9,7 +9,7 @@ namespace MOSSADDQueueDocument
 {
     public class MOSS
     {
-        public string addQueueDocument(string pathToFile, string travelerFirstName, string travelerLastName, int travelerId, string Comments, string title )
+        public string addQueueDocument(string pathToFile, string travelerFirstName, string travelerLastName, int travelerId, string Comments, string title, string Library)
         {
             string fileNameDebug = "resultContent_" + travelerLastName + "_" + travelerId.ToString() + " .txt";
             System.IO.File.WriteAllText(@"D:\\Data\\BPMA\\FA_Worker_Robust_Files\\" + fileNameDebug, Environment.NewLine + "calling addQueueDocument.  fileName=" + pathToFile + "  traveleName=" + travelerLastName + Environment.NewLine);
@@ -37,6 +37,14 @@ namespace MOSSADDQueueDocument
                 Library = ICEDocument.QueueLibrary.Bulkload,
                 Email = "NoReply@amnheathcare.com"
             };
+            if (Library.Contains("Backfile"))
+            {
+                item.Library = ICEDocument.QueueLibrary.Bulkload;
+            }
+            else if (Library.Contains("Standard"))
+            {
+                item.Library = ICEDocument.QueueLibrary.Queue;
+            }
 
             item.Data = GetFileInBytes(pathToFile);
             System.IO.File.AppendAllText(@"D:\\Data\\BPMA\\FA_Worker_Robust_Files\\resultContent.txt", "item.Data populated, calling AddQueueDocument" + Environment.NewLine);
@@ -68,7 +76,23 @@ namespace MOSSADDQueueDocument
             
             return data;
         }
+        public string GetTravelerDocument(int tid, string guid) {
+            ICEDocument.DocumentServiceClient mossClient = new ICEDocument.DocumentServiceClient("BasicHttpBinding_IDocumentService");
+            ICEDocument.TravelerDocumentItem docItem = new ICEDocument.TravelerDocumentItem();
+            string returnValue;
+            try
+            {
+                docItem = mossClient.GetTravelerDocument(tid, new Guid(guid), ICEDocument.TravelerLibrary.Traveler, true);
+                File.WriteAllBytes("C:\\temp\\" + docItem.Name, docItem.Data);
+                returnValue = docItem.Name;
+            }
+            catch(Exception e)
+            {
+                returnValue = e.Message;
+            }
+            return returnValue;
+        }
 
-        
+
     }
 }
