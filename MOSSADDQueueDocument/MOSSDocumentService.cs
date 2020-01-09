@@ -76,14 +76,14 @@ namespace MOSSADDQueueDocument
             
             return data;
         }
-        public string GetTravelerDocument(int tid, string guid) {
+        public string GetTravelerDocument(int tid, string guid, string path) {
             ICEDocument.DocumentServiceClient mossClient = new ICEDocument.DocumentServiceClient("BasicHttpBinding_IDocumentService");
             ICEDocument.TravelerDocumentItem docItem = new ICEDocument.TravelerDocumentItem();
             string returnValue;
             try
             {
                 docItem = mossClient.GetTravelerDocument(tid, new Guid(guid), ICEDocument.TravelerLibrary.Traveler, true);
-                File.WriteAllBytes("C:\\temp\\" + docItem.Name, docItem.Data);
+                File.WriteAllBytes(path + docItem.TravelerID +"_"+docItem.Name, docItem.Data);
                 returnValue = docItem.Name;
             }
             catch(Exception e)
