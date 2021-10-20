@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Data;
+using System.Data.SqlClient;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -93,6 +95,27 @@ namespace MOSSADDQueueDocument
             return returnValue;
         }
 
-
+        public string CollectDocsFromSQL(string ConnectionString, string SQLTidGuid, string PathToDropFiles) {
+            string rValue= "Success";
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            {
+                SqlCommand command = new SqlCommand(SQLTidGuid, connection);
+                try
+                {
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        rValue += ";"+ GetTravelerDocument(reader.GetInt32(0), reader.GetString(1), PathToDropFiles);
+                    }
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    rValue = ex.Message;
+                }
+            }
+            return rValue;
+        }
     }
 }
